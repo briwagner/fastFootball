@@ -1,0 +1,368 @@
+body {
+	background-color:#333;
+}
+
+#container {
+	background-color: #d3d3d3;
+	padding:0;
+	margin:0;
+	min-width: 1170px;
+}
+
+#spacerRow1 {
+	height:10px;
+	background: linear-gradient(180deg, #d3d3d3, #595959);
+}
+
+#spacerRow2 {
+	height:10px;
+	background: linear-gradient(0deg, #d3d3d3, #474747);
+}
+
+#spacerBottom {
+	height:5px;
+	background-color: black;
+}
+
+#topRow, #bottomRow {
+	background-color: #d3d3d3;
+}
+
+.row {
+	border-right:2px solid black;
+}
+
+/* Play area */
+
+.turf {
+	background-image: url("pics/turf.jpg");
+	background-repeat: no-repeat;
+	background-position: 10px;
+	background-size: 100%;
+	height:40px;
+}
+
+#ball {
+	height:20px;
+	width:40px;
+	border-radius: 15px;
+	border:2px solid #fff;
+	background-color: saddlebrown;
+	position: relative;
+	top: 10px;
+	left: 572px;
+	box-shadow: 5px 5px 2px #333;
+}
+
+#mainPlay {
+	background-color: lightyellow;
+}
+
+#field1, #field2 {}
+
+#mainPlayRow {
+}
+
+.fieldRow {
+	background-color: greenyellow;
+}
+
+.playArea {
+	background-color: lightgray;
+}
+/* used for all three panes in main area */
+.playThird {
+	border-left: solid 2px white;
+	padding:0;
+	height:240px;
+}
+
+/* offense & defense panes */
+#bigOffense, #bigDefense {
+	padding:25px 20px 0 20px;
+	margin:4px 0 0;
+	height:232px
+}
+
+#bigOffense p.playType, #bigDefense p.playType {
+	font-size: 48px;
+	color: black;
+	margin-top:10px;
+	text-align: left;
+	font-weight: 600;	
+}
+
+#bigOffense p.yards, #bigDefense p.yards {
+	font-size:38px;
+	color:black;
+	text-align: left;
+	line-height: 2.6em;
+	font-weight: 400;
+}
+
+#bigOffense {
+	background: linear-gradient(#539f46, darkgreen);
+}
+
+#bigOffense > div {
+	opacity: 0;
+	transform: rotateY(180deg);
+	transition: opacity ease-in 0.5s, transform ease-in-out 1s;
+}
+
+#bigOffense > div:hover {
+	opacity:1;
+	transform: rotateY(0);
+}
+
+#bigOffense > .showIt {
+	opacity:1;
+	transform: rotateY(0);
+} 
+
+#bigDefense {
+	background: linear-gradient(0deg, #CC0000, #c74a4a);
+}
+#offPlay #bigOffense h1, #defPlay #bigDefense h1 {
+	font-size:48px;
+	text-align: left;
+	color:black;
+	margin-top:0;
+}
+
+#bigOffense h2, #bigDefense h2 {
+	color:black;
+	font-size: 38px;
+	line-height: 2.6em;
+}
+
+#scoreBoard {
+	background: #333 url(pics/dotsLight.png);
+	background-position: 30px 10px;
+}
+
+#scoreBoard h1 {
+	color: #fbffc4;
+	text-shadow:2px 2px black;
+}
+
+#scoreBoard h2 {
+	text-align: center;
+	line-height: 1.1em;
+	color: #fbffc4;
+	text-shadow:2px 2px black;
+}
+
+#offPlay h1, #defPlay h1 {
+	color:#666;
+}
+.playArea h1 {
+	text-align: center;
+	line-height: 1.8em;	
+	font-weight: bold;
+}
+
+#mainPlayRow img.cardImg {
+	float:right;
+	width:160px;
+	margin-top: 4px;
+	border-radius:5px;
+	border: 2px solid black;
+}
+
+#mainPlayRow .turnover img.cardImg {
+	border: 4px solid yellow;
+}
+
+.hidden {
+	display:none;
+}
+
+/* Player area */ 
+#topPlayer {
+	background: linear-gradient(#353535, #b3b3b3);
+	border-radius: 0 0 15px 15px;
+	border-bottom: solid 2px ivory;
+	color:whitesmoke;
+}
+
+#bottomPlayer {
+	background: linear-gradient(#816300, #e7b200);
+	border-radius: 15px 15px 0 0;
+	border-top: solid 2px ivory;
+	color:whitesmoke;
+}
+
+#topPlayer h2, #bottomPlayer h2 {
+	padding-left: 15px;
+	font-weight: 600;
+	color: #gainsboro;
+	text-shadow: 2px 2px #333;
+}
+
+/* Cards defined here */
+.initText {
+	font-size: 26px;
+	color: #999;
+	font-style: italic;
+	text-align: center;
+	padding-top: 10px;
+}
+.cardRow {
+	height:90px;
+}
+
+.card {
+	margin:0;
+	border-left: solid 2px ivory;
+	color: ivory;
+	padding-top:12px;
+}
+
+.card > div {
+	opacity:0;
+	transition: opacity 0.5s;
+}
+
+.card > div:hover {
+	opacity: 1;
+}
+
+.topcard {
+	border-radius: 0 0 15px 15px;
+	border-bottom: solid 2px ivory;
+}
+
+.bottomcard {
+	border-radius: 15px 15px 0 0;
+	border-top:solid 2px ivory;
+}
+
+.offense {
+	background: linear-gradient(#539f46, darkgreen);
+}
+
+.defense {
+	background: linear-gradient(0deg, #CC0000, #c74a4a); 
+}
+
+.card p {
+	margin-bottom: 5px;
+}
+p.playType {
+	font-size: 26px;
+	line-height: 1.1em;
+}
+p.yards {
+	font-size: 20px;
+	font-weight: 600;
+}
+p.sideBall {
+	visibility: hidden;
+}
+
+.cardRow img {
+	width:60px;
+	float:right;
+	border-radius: 5px;
+}
+
+.offense img {
+	border: 1px solid black;
+}
+
+.defense img {
+	border: 1px solid black;
+}
+
+.card button, .card button {
+	font-size: 18px;
+	color: #666;
+	margin-left:30px;
+	margin-top:12px;
+}
+
+.turnover img.cardImg {
+	border: 4px solid yellow;
+}
+
+/* marquee area */
+#marquee {
+	height:35px;
+	background: #333 url('pics/dotsLight.png');
+	background-position: 30px 10px;
+	font-size: 24px;
+	font-style: italic;
+	text-align: center;
+	color:#fbffc4;
+	border-top:3px solid #7b7a7a;
+}
+
+/* popUp box and start button */
+#startBox {
+	display:none;
+}
+
+#startBox2 {
+	display:none;
+}
+
+#startBox3 {
+	display:none;
+}
+
+.popperBkg {
+	background-color: antiquewhite;
+	border-radius: 15px;
+	position:absolute;
+	top:40px;
+	left:35%;
+	height:400px;
+	width:400px;
+	z-index: 1000;
+}
+
+.pops {
+	background-color: saddlebrown;
+	position: absolute;
+	top:5%;
+	height:90%;
+	width:100%;
+	padding-top:45px;
+	font-size: 52px;
+	text-align: center;
+	color:antiquewhite;
+}
+
+.pops input[type="text"]{
+	font-size: 24px;
+	color:saddlebrown;
+}
+
+.btn-success {
+	font-size: 32px;
+}
+
+/*ensure not responsive*/
+
+#container {
+	width:1170px !important;
+}
+
+/* Testing area */
+#oCards {
+	display:none;
+}
+#oCards img {
+	width:20px;	
+}
+
+#buttonArea {
+	display:none;
+}
+
+.debug {
+	background-color: white;
+	color:black;
+	display:none;
+}

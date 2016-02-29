@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title> Fast Football </title>
+	<!-- Bootstrap -->
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- My files -->
+	<link rel="stylesheet" href="style.css" type="text/css" />
+ 	<script type="text/javascript" src="jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.11.3/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="script.js"> </script>    
+		   </head>
+<body>
+
+<div id="container" class="container container-fluid">
+	<!-- Top player section -->
+	<div id="topRow" class="row cardRow">
+		<div id="topPlayer" class="col-xs-4 cardRow playerBox">
+			<h2>Player 1 is here</h2>
+		</div>
+		<div id="tCard1" class="col-xs-2 cardRow card topcard">
+		<!--<img class="cardSmall" src="testImg.jpg" width="60px" alt="" />
+			<p class="playType">Rush</p>
+			<p class="yards">5 yards</p>
+			<p class ="sideBall">side</p> -->
+			<div class="initText"><p>Need a card<p/></div>
+		</div>
+		<div id="tCard2" class="col-xs-2 cardRow card topcard"><div class="initText"><p>Need a card<p/></div></div>
+		<div id="tCard3" class="col-xs-2 cardRow card topcard"><div class="initText"><p>Need a card<p/></div></div>
+		<div id="tCard4" class="col-xs-2 cardRow card topcard"><div class="initText"><p>Need a card<p/></div></div>
+	</div>
+
+	<!-- spacer row -->
+	<div class="spacer">
+		<div id="spacerRow1" class="row spacerRow">
+			<div class="col-xs-12"></div>
+		</div>
+	</div>
+
+	<!-- Main play area -->
+	<div id="mainPlay">
+		<!-- TOP BALL IS HERE -->
+		<div id="field1" class="row fieldRow">
+			<div class="col-xs-12 turf">
+				<div id="ball"></div>
+			</div>
+		</div>
+
+		<div id="mainPlayRow" class="row playArea">
+			<div id="scoreBoard" class="col-xs-4 playThird">
+				<h1><span id="p1Scoreboard">Player 1</span>: <span id="p1Points">0</span></h1>
+				<h2>Down: <span id="downNumber">1</span> | Time: <span id="timeLeft">24</span></h2>	
+				<h1><span id="p2Scoreboard">Player 2</span>: <span id="p2Points">0</span></h1>
+			</div>
+			<!-- offense play pane -->
+			<div id="offPlay" class="col-xs-4 playThird">
+				<div id="dropOffense">
+					<h1 class="centered"><i>Drop an <br /> offense card <br />here</i></h1>
+				</div>
+				<div id="bigOffense" class="hidden">
+<!--					<img class="cardBig" src="testImg.jpg" width="160px" />
+					<h1 class="playType">Rush</h1>
+					<h2 class="yards">5 yards</h2> -->
+				</div>
+			</div>
+			<!-- defense play pane -->
+			<div id="defPlay" class="col-xs-4 playThird">
+				<div id="dropDefense">
+					<h1 class="centered"><i> Drop a <br />defense card <br />here</i></h1>
+				</div>
+				<div id="bigDefense" class="hidden">
+
+				</div>	
+			</div>
+		</div>
+		
+<!-- 		<div id="field2" class="row fieldRow">
+			<div class="col-md-12 turf"></div>
+		</div>
+ -->		<!-- marquee here -->
+		<div id="marquee" class="row"> 
+			<marquee type="scroll" direction="left" scrollamount="25" loop="1" ></marquee>
+		</div>
+
+	</div>
+
+	<!-- spacer row -->
+	<div class="spacer">
+		<div id="spacerRow2" class="row">
+			<div class="col-xs-12"></div>
+		</div>
+	</div>
+		
+	<!-- Bottom player section -->
+	<div id="bottomRow" class="row cardRow">
+		<div id="bottomPlayer" class="col-xs-4 cardRow playerBox">
+			<h2>Player 2 is here</h2>
+		</div>
+		<div id="bCard1" class="col-xs-2 cardRow card bottomcard">
+<!--			<img class="cardSmall" src="testImg.jpg" width="60px" alt="" />
+			<p class="playType">Pass</p>
+			<p class="yards">5 yards</p>
+			<p class ="sideBall">side</p> -->
+			<div class="initText"><p>Need a card<p/></div>
+		</div>
+		<div id="bCard2" class="col-xs-2 cardRow card bottomcard"><div class="initText"><p>Need a card<p/></div></div>
+		<div id="bCard3" class="col-xs-2 cardRow card bottomcard"><div class="initText"><p>Need a card<p/></div></div>
+		<div id="bCard4" class="col-xs-2 cardRow card bottomcard"><div class="initText"><p>Need a card<p/></div></div>
+	</div>
+	<!-- spacer row -->
+	<div id="spacerBottom" class="row">
+	</div>
+
+	<!-- marquee area -->
+<!-- 	<div id="marquee" class="row"> 
+		<marquee type="scroll" direction="left" scrollamount="25" loop="1" ></marquee>
+	</div> -->
+	<!-- testing buttons -->
+	<div id="buttonArea">
+		<button type="button" onclick='flip()'>Flip a coin</button>
+		<button type="button" onclick="shuffleAll()">Shuffle all</button>
+		<button type="button" onclick="dealTest()" >Deal a new game</button>
+		<button type="button" onclick="compare()">Compare the cards</button>
+		<button type="button" onclick="fadePlay()">Clear the play field</button>
+		<button type='button' onclick="player1Name()">Name p1</button>
+		<button type="button" onclick="player2Name()">Name p2</button>
+		<button type="button" onclick="showYards()">Show yards</button>
+	</div>
+	<div>
+		<p class="debug">Yards to go: <span id="yardsToGo">80</span> | 
+			Yards gained: <span id="yardsGained">0</span> | 
+			Down <span id="playDown">1</span> | 
+			moveTen: <span id="moveTen">10</span></p>
+	</div>
+	<!-- pop up box to launch game -->
+	<div id="startBox" class="popperBkg">
+		<div id="popperBox" class="pops">
+			<p>Ready to play Fast Football? </p>
+			<button id="startButton" class="btn btn-success" type="button" onclick="startGame()">Start the game</button>
+		</div>
+	</div>
+
+	<div id="startBox2" class="popperBkg">
+		<div id="popperBox2" class="pops">
+			<p>Who is playing?</p>
+			<input id="player1NameBox" type="text" placeholder="Give me a name"></input>
+			<button id="player1NameButton" class="btn btn-success" type="button" onclick="startGame2()">Confirm Player 1</button>
+		</div>
+	</div>
+
+	<div id="startBox3" class="popperBkg">
+		<div id="popperBox3" class="pops">
+			<p>Who else?</p>
+			<input id="player2NameBox"type="text" placeholder="Give me another name"></input>
+			<button id="player2NameButton" class="btn btn-success" type="button" onclick="startGame3()">Confirm Player 2</button>
+		</div>
+	</div>
+
+
+
+</div>
+
+</body>
+</html>
