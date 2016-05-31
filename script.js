@@ -135,63 +135,44 @@ var yardsGained;
 
 var timeLeft = 24;
 
-// Define Cards 
-
-function card(playType, side, yards, imgsrc, turnOver) {
-    this.playType = playType;
-    this.side = side;
-    this.yards = yards;
-    this.imgsrc = imgsrc;
-    this.turnOver = false;
-    this.showCard = function() {
-        return '<div class="' + this.playType + '"><img class="cardImg" src="pics/' + this.imgsrc + '" /> <p class="playType">' + this.playType + '</p> <p class="yards">' + this.yards + ' yards</p></div>';
-    }    
-};
 // OFFENSE  four of rush5
-var rush5 = new card("Rush", "offense", 5, "rush.jpg");
+var rush5 = new Card("Rush", "offense", 5, "rush.jpg");
 // two of each 
-var rush10 = new card("Rush", "offense", 10, "rush.jpg");
-var rush15 = new card("Rush", "offense", 15, "rush.jpg");
+var rush10 = new Card("Rush", "offense", 10, "rush.jpg");
+var rush15 = new Card("Rush", "offense", 15, "rush.jpg");
 // one of these
-var rush30 = new card("Rush", "offense", 30, "rush.jpg");
+var rush30 = new Card("Rush", "offense", 30, "rush.jpg");
 // four of pass5
-var pass5 = new card("Pass", "offense", 5, "pass.jpg");
+var pass5 = new Card("Pass", "offense", 5, "pass.jpg");
 // two of each
-var pass10 = new card("Pass", "offense", 10, "pass.jpg");
-var pass15 = new card("Pass", "offense", 15, "pass.jpg");
-var pass30 = new card("Pass", "offense", 30, "pass.jpg");
-var punt40 = new card("Punt", "offense", 40, "punt.jpg");
-var kick40 = new card("Kick", "offense", 40, "kick.jpg");
+var pass10 = new Card("Pass", "offense", 10, "pass.jpg");
+var pass15 = new Card("Pass", "offense", 15, "pass.jpg");
+var pass30 = new Card("Pass", "offense", 30, "pass.jpg");
+var punt40 = new Card("Punt", "offense", 40, "punt.jpg");
+var kick40 = new Card("Kick", "offense", 40, "kick.jpg");
 // one of each
-var bombPass = new card("Bomb", "offense", 100, "pass.jpg");
+var bombPass = new Card("Bomb", "offense", 100, "pass.jpg");
 
 // DEFENSE seven of tackle0
-var tackle0 = new card("Rush", "defense", 0, "tackle.jpg");
+var tackle0 = new Card("Rush", "defense", 0, "tackle.jpg");
 // four of these
-var tackle5 = new card("Rush", "defense", 5, "tackle.jpg");
+var tackle5 = new Card("Rush", "defense", 5, "tackle.jpg");
 // two of these
-var tackle10 = new card("Rush", "defense", 10, "tackle.jpg");
+var tackle10 = new Card("Rush", "defense", 10, "tackle.jpg");
 // one of these
-var fumble = new card("Rush", "defense", 0, "fumble.jpg");
+var fumble = new Card("Rush", "defense", 0, "fumble.jpg");
 fumble.turnOver = true;
 fumble.showCard = function() {
         return '<div class="' + this.playType + ' turnover"><img class="cardImg" src="pics/' + this.imgsrc + '" /> <p class="playType">' + this.playType + '</p> <p class="yards">' + this.yards + ' yards</p></div>'; } ;
-var interception = new card("Pass", "defense", 0, "interception.jpg");
+var interception = new Card("Pass", "defense", 0, "interception.jpg");
 interception.turnOver = true;
 interception.showCard = function() {
         return '<div class="' + this.playType + ' turnover"><img class="cardImg" src="pics/' + this.imgsrc + '" /> <p class="playType">' + this.playType + '</p> <p class="yards">' + this.yards + ' yards</p></div>'; };
-var bombBlock = new card("Bomb", "defense", 0, "passblock.jpg");
-var kickBlock = new card("Kick", "defense", 0, "kickblock.jpg");
-var puntBlock = new card("Punt", "defense", 0, "puntblock.jpg"); 
+var bombBlock = new Card("Bomb", "defense", 0, "passblock.jpg");
+var kickBlock = new Card("Kick", "defense", 0, "kickblock.jpg");
+var puntBlock = new Card("Punt", "defense", 0, "puntblock.jpg"); 
 // six pass incomplete
-var incompletePass = new card("Pass", "defense", 0, "passblock.jpg");
-
-// var deckOff = [rush5, rush5, rush5, rush5, rush10, rush10, rush15, rush15, rush30, 
-//     pass5, pass5, pass5, pass5, pass10, pass10, pass15, pass15, bombPass, punt40, punt40, kick40, kick40];
-    
-// var deckDef = [tackle0, tackle0, tackle0, tackle0, tackle0, tackle0, tackle0, tackle5, tackle5, tackle5, tackle5,
-//     tackle10, tackle10, fumble, interception, bombBlock, kickBlock, puntBlock, incompletePass, incompletePass, 
-//     incompletePass, incompletePass, incompletePass, incompletePass];
+var incompletePass = new Card("Pass", "defense", 0, "passblock.jpg");
 
 var fullDeck = [rush5, rush5, rush5, rush5, rush10, rush10, rush15, rush15, rush30, 
     pass5, pass5, pass5, pass5, pass10, pass10, pass15, pass15, bombPass, punt40, punt40, kick40, kick40,
