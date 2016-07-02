@@ -1,5 +1,5 @@
 describe("Card", function() {
-    var Card = require("../models");
+    var Card = require("../app");
     var rush5;
     
     beforeEach(function() {
@@ -33,7 +33,7 @@ describe("Card", function() {
 });
 
 describe("showCard function", function() {
-    var Card = require("../models");
+    var Card = require("../app");
     var rush5;
     
     beforeEach(function() {

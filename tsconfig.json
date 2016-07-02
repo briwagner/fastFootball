@@ -2,6 +2,12 @@
  "compilerOptions": {
      "target": "es5",
      "module": "commonjs",
-     "sourceMap": true
- }   
+     "sourceMap": true,
+     "outFile": "app.js"
+ },   
+ "files": [
+     "src/card.ts",
+     "src/game.ts",
+     "src/player.ts"
+ ]
 }

@@ -1,8 +1,8 @@
 export class Game {
     constructor(playerOneName, playerTwoName) {
-        this.player1 = new Player(playerOneName)
-        this.player2 = new Player(playerTwoName)
-        this.playsLeft = 32
+        public this.player1 = new Player(playerOneName)
+        public this.player2 = new Player(playerTwoName)
+        public this.playsLeft = 32
     }
 }
 
