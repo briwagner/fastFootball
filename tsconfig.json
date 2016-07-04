@@ -1,11 +1,11 @@
 {
  "compilerOptions": {
      "target": "es5",
-     "module": "commonjs",
+     "module": "amd",
      "sourceMap": true,
      "outFile": "app.js"
- },   
- "files": [
+ },
+ "files" : [
      "src/card.ts",
      "src/game.ts",
      "src/player.ts"
