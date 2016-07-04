@@ -1,4 +1,4 @@
-export class Player {
+class Player {
     public string: name
     constructor(name) {
         if (name === undefined) {
@@ -14,6 +14,6 @@ export class Player {
     } 
 }
 
-if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
-    module.exports = Player;
-}
+// if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
+//     module.exports = Player;
+// }

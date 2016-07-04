@@ -1,4 +1,4 @@
-export class Card {
+class Card {
     public string: playType
     public string: side
     public number: yards
@@ -15,6 +15,6 @@ export class Card {
     } 
 }
 
-if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
-    module.exports = Card;
-}
+// if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
+//     module.exports = Card;
+// }

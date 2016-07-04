@@ -1,4 +1,4 @@
-export class Game {
+class Game {
     constructor(playerOneName, playerTwoName) {
         public this.player1 = new Player(playerOneName)
         public this.player2 = new Player(playerTwoName)
@@ -6,6 +6,6 @@ export class Game {
     }
 }
 
-if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
-    module.exports = Game;
-}
+// if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') ) {
+//     module.exports = Game;
+// }
