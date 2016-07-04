@@ -1,5 +1,5 @@
 describe("Player", function() {
-    var Player = require("../player");
+    // var Player = require(["./app.js"]);
     var player;
     
     beforeEach(function() {
@@ -14,3 +14,5 @@ describe("Player", function() {
         expect(notPlayer).toThrowError("Player must have a name");
     })
 })
+
+// add check if score() is called empty, it turns .score into NaN

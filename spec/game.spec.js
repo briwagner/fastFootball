@@ -1,7 +1,5 @@
-// var Game = require("../game.js");
-
 describe("Game", function() {
-    var Game = require("../game");
+    // var Game = require(["./app.js"]);
     var game;
     
     beforeEach(function() {
@@ -29,7 +27,7 @@ describe("Game", function() {
 })
 
 describe("Game methods", function() {
-    var Game = require("../game");
+    // var Game = require(["./app.js"]);
     var game;
     
     beforeEach(function() {
