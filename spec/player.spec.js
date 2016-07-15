@@ -10,8 +10,8 @@ describe("Player", function() {
         expect(player.name).toEqual("ralph");
     })
     it("must receive a name", function() {
-        var notPlayer = new Player();
-        expect(notPlayer).toThrowError("Player must have a name");
+        var notPlayer = function() { new Player() };
+        expect(function() { notPlayer(); }).toThrow();
     })
 })
 

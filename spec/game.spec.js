@@ -1,5 +1,4 @@
 describe("Game", function() {
-    // var Game = require(["./app.js"]);
     var game;
     
     beforeEach(function() {
