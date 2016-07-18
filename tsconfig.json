@@ -8,6 +8,7 @@
  "files" : [
      "src/card.ts",
      "src/game.ts",
-     "src/player.ts"
+     "src/player.ts",
+     "src/deck.ts"
  ]
 }
