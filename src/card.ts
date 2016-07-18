@@ -3,15 +3,23 @@ class Card {
     public string: side
     public number: yards
     public string: imgsrc
-    public turnOver = false;
+    public boolean: turnOver = false
     constructor(playType, side, yards, imgsrc) {
-        this.playType = playType;
-        this.side = side;
-        this.yards = yards;
-        this.imgsrc = imgsrc;
+        this.playType = playType
+        this.side = side
+        this.yards = yards
+        this.imgsrc = imgsrc
     }
     public showCard = function() {
-        return '<div class="' + this.playType + '"><img class="cardImg" src="pics/' + this.imgsrc + '" /> <p class="playType">' + this.playType + '</p> <p class="yards">' + this.yards + ' yards</p></div>';
+        return '<div class="' + 
+               this.playType + 
+               '"><img class="cardImg" src="pics/' + 
+               this.imgsrc + 
+               '" /> <p class="playType">' + 
+               this.playType + 
+               '</p> <p class="yards">' + 
+               this.yards + 
+               ' yards</p></div>'
     } 
 }
 
