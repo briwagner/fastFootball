@@ -1,0 +1,30 @@
+{
+  "name": "fast_football",
+  "version": "1.0.0",
+  "description": "Fast football, now in Typescript!",
+  "main": "card.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register src/test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briwagner/fastFootball.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/briwagner/fastFootball/issues"
+  },
+  "homepage": "https://github.com/briwagner/fastFootball#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/mocha": "^2.2.41",
+    "awesome-typescript-loader": "^3.2.1",
+    "chai": "^4.1.0",
+    "jasmine": "^2.6.0",
+    "jasmine-core": "^2.6.4",
+    "mocha": "^3.4.2",
+    "source-map-loader": "^0.2.1",
+    "ts-node": "^3.3.0"
+  }
+}
