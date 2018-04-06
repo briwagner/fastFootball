@@ -4,7 +4,7 @@
   "description": "Fast football, now in Typescript!",
   "main": "card.js",
   "scripts": {
-    "test": "mocha -r ts-node/register src/test.ts"
+    "test": "mocha -r ts-node/register tests/*test.ts"
   },
   "repository": {
     "type": "git",
