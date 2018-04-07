@@ -1,16 +1,19 @@
+import { Player } from './player';
+
 export class Card {
-  constructor(
-    public playType: string,
-    public side: string,
-    public yards: number,
-    public imgsrc: string,
-    public turnOver?: boolean
-  ) {
-    this.playType = playType;
-    this.side = side;
-    this.yards = yards;
-    this.imgsrc = imgsrc;
-    this.turnOver = turnOver ? turnOver : false;
+  public playType: string
+  public side: string
+  public yards: number
+  public imgsrc: string
+  public turnover: boolean
+  public owner: Player
+
+  constructor(obj) {
+    this.playType = obj.playType;
+    this.side = obj.side;
+    this.yards = obj.yards;
+    this.imgsrc = obj.imgsrc;
+    this.turnover = obj.turnover ? obj.turnover : false;
   }
   
   public showCard = function() {

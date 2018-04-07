@@ -5,16 +5,23 @@ import { Play } from './play';
 export class Game {
   public home: Player
   public visitor: Player
-  private playsLeft: number
-  public plays: Array<Play>
+  public playsLeft: number
   public ballSpot: number
+  public currentDown: number
+  public plays: Array<Play>
 
-  constructor(public playerOneName: string, public playerTwoName: string) {
-    this.home = new Player(playerOneName)
-    this.visitor = new Player(playerTwoName)
-    this.playsLeft = 32
+  constructor(public homeName: Player, public visitorName: Player) {
+    this.home = homeName
+    this.visitor = visitorName
   }
-    
+
+  startGame() {
+    this.playsLeft = 32;
+    this.ballSpot = 20;
+    this.currentDown = 1;
+    this.plays = [];
+  }
+
   playDown(cardOne: Card, cardTwo: Card) {
     if (this.playsLeft == 0) {
       return;
@@ -37,9 +44,28 @@ export class Game {
     else if (playResult.turnover) {
       // Ball spot is unchanged.
       let nothingHappens;
-    } else () {
+      this.switchSides();
+    } else {
       // Typical play.
       this.ballSpot = playResult.yardStart - playResult.yardage;
+    }
+  }
+
+  playerOffense() {
+    if (this.home.inPossession) {
+      return this.home;
+    } else {
+      return this.visitor;
+    }
+  }
+
+  switchSides() {
+    if (this.playerOffense() == this.home) {
+      this.home.inPossession = false;
+      this.visitor.inPossession = true;
+    } else {
+      this.home.inPossession = true;
+      this.visitor.inPossession = false;
     }
   }
 }

@@ -4,8 +4,8 @@ import { expect } from 'chai';
 import 'mocha';
 
 describe('Play', () => {
-  let cardOne = new Card('rush', 'offense', 10, 'rush10.jpg');
-  let cardTwo = new Card('rush', 'defense', 10, 'fumble.jpg', true);
+  let cardOne = new Card({playType: 'rush', side: 'offense', yards: 10, imgsrc: 'rush10.jpg'});
+  let cardTwo = new Card({playType: 'rush', side: 'defense', yards: 10, imgsrc: 'fumble.jpg', turnover: true});
   let play = new Play(cardOne, cardTwo, 25);
   it('should have one card', () => {
     expect(play.cardOne).to.be.an.instanceof(Card);
@@ -25,8 +25,8 @@ describe('Play', () => {
 });
 
 describe('Play method getResult', () => {
-  let cardOne = new Card('rush', 'offense', 10, 'rush10.jpg');
-  let cardTwo = new Card('rush', 'defense', 10, 'fumble.jpg', true);
+  let cardOne = new Card({playType: 'rush', side: 'offense', yards: 10, imgsrc: 'rush10.jpg'});
+  let cardTwo = new Card({playType: 'rush', side: 'defense', yards: 10, imgsrc: 'fumble.jpg', turnover: true});
   let play = new Play(cardOne, cardTwo, 25);
   let playResult = play.getResult();
 

@@ -21,7 +21,7 @@ export class Play {
     // Defense wins.
     if (this.cardOne.playType == this.cardTwo.playType) {
       this.playType = this.cardTwo.playType;
-      if (this.cardTwo.turnOver) {
+      if (this.cardTwo.turnover) {
         this.turnover == true;
         this.yardage = 0;
       } else {

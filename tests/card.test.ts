@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import 'mocha';
 
 describe('Offense Card', () => {
-  var card = new Card('rush', 'offense', 10, 'rush10.jpg');
+  var card = new Card({playType: 'rush', side: 'offense', yards: 10, imgsrc: 'rush10.jpg'});
   it('should be a card', () => {
     expect(card).to.be.an.instanceof(Card);
   });
@@ -23,10 +23,10 @@ describe('Offense Card', () => {
     expect(card).to.have.ownProperty('imgsrc');
   });
   it('should have a turnover property', () => {
-    expect(card).to.have.ownProperty('turnOver');
+    expect(card).to.have.ownProperty('turnover');
   });
   it('should have FALSE as turnover by default', () => {
-    expect(card.turnOver).to.equal(false);
+    expect(card.turnover).to.equal(false);
   });
   it('should return an HTML element with its values', () => {
     expect(card.showCard()).to.have.string('<div class=');
@@ -35,7 +35,7 @@ describe('Offense Card', () => {
 
 describe('Defense Card', () => {
   it('should have TRUE as turnover when passed as parameter', () => {
-    let card = new Card('rush', 'defense', 0, 'fumble.jpg', true);
-    expect(card.turnOver).to.equal(true);
+    let card = new Card({playType: 'rush', side: 'defense', yards: 0, imgsrc: 'fumble.jpg', turnover: true});
+    expect(card.turnover).to.equal(true);
   })
 });

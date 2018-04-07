@@ -4,13 +4,16 @@ export class Player {
   public score: number
   public name: string
   public cards: Array<Card>
+  public inPossession: boolean
+  public hand: Array<Card>
 
   constructor(name: string) {
     if (name === undefined) {
-      throw "Player must have a name"            
+      throw "Player must have a name"
     } else {
       this.name = name
       this.score = 0
+      this.hand = [];
     }
   }
     
@@ -20,7 +23,20 @@ export class Player {
   } 
 
   public getCards(cards: Array<Card>) {
+    cards.forEach(obj => {
+      obj.owner = this;
+      return obj;
+    });
     this.cards = cards;
+  }
+
+  public drawCard() {
+    if (this.cards.length ==0) {
+      throw 'No more cards in the pile'
+    } else {
+      let topCard = this.cards.shift();
+      this.hand.push(topCard);
+    }
   }
 
   public playCard(card: Card) {
@@ -39,6 +55,5 @@ export class Player {
       array[j] = temp;
     }
     this.cards = array;
-    return this.cards;
   }
 }
