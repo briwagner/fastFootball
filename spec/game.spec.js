@@ -1,7 +1,7 @@
 // var Game = require("../game.js");
 
 describe("Game", function() {
-    var Game = require("../game");
+    var Game = require("../src/game.ts");
     var game;
     
     beforeEach(function() {

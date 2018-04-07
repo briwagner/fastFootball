@@ -1,5 +1,5 @@
 describe("Player", function() {
-    var Player = require("../player");
+    var Player = require("../src/player.ts");
     var player;
     
     beforeEach(function() {

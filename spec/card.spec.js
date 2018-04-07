@@ -1,35 +1,37 @@
+import Card from '../src/card';
+
 describe("Card", function() {
-    var Card = require("../models");
+    // var Card = require("../dist/bundle.js");
     var rush5;
-    
+
     beforeEach(function() {
-       rush5 = new Card("Rush", "offense", 5, "rush.jpg"); 
+        rush5 = new Card("Rush", "offense", 5, "rush.jpg"); 
     });
-    
+
     it('should be a card', function() {
         expect(rush5).toEqual(jasmine.any(Card));    
     })
-    
+
     it('should show the play type', function() {
         expect(rush5.playType).toEqual("Rush");
     })
-    
+
     it('should show the play side offense/defense', function() {
         expect(rush5.side).toEqual("offense");
     })
-    
+
     it('should show the yard value', function() {
         expect(rush5.yards).toEqual(5);
     })
-    
+
     it('should return a number for yards', function() {
         expect(rush5.yards).toEqual(jasmine.any(Number));
     })
-    
+
     it('should have an image link', function() {
         expect(rush5.imgsrc).toEqual('rush.jpg');
     })
-    
+
 });
 
 describe("showCard function", function() {
